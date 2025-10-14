@@ -28,7 +28,6 @@ for cnt in contours:
             aspect_ratio = round(w / h, 2)
             compactness = round(4 * np.pi * area / (perimeter ** 2), 2)
 
-            # визначення форми
             approx = cv2.approxPolyDP(cnt, 0.02 * perimeter, True)
             sides = len(approx)
 
@@ -56,3 +55,4 @@ cv2.imwrite("result.jpg", img_copy)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+

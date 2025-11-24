@@ -4,14 +4,14 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 
 train_ds = tf.keras.preprocessing.image_dataset_from_directory(
-    'data/train1',
+    'data/train',
     image_size=(128, 128),
     batch_size=30,
     label_mode='categorical'
 )
 
 test_ds = tf.keras.preprocessing.image_dataset_from_directory(
-    'data/test1',
+    'data/test',
     image_size=(128, 128),
     batch_size=30,
     label_mode='categorical'
@@ -68,3 +68,4 @@ predicted_index = np.argmax(predictions[0])
 
 print('Імовірності по класах:', predictions[0])
 print('Модель визначила:', class_names[predicted_index])
+

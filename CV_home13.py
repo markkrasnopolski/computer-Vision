@@ -56,9 +56,9 @@ test_loss, test_accuracy = model.evaluate(test_ds)
 print('Test loss:', test_loss)
 print('Test accuracy:', test_accuracy)
 
-class_names = ['man', 'orange', 'tomato']
+class_names = ['pineapple', 'snake', 'tree']
 
-img = image.load_img('data/test1/orange/photo_orange_27.jpg', target_size=(128, 128))
+img = image.load_img('data/test/pineapple/imgi_166_Pineapple_7248e4f5-8b22-4001-b2c5-f09170a1babb.jpg', target_size=(128, 128))
 img_array = image.img_to_array(img)
 img_array = img_array / 255.0
 img_array = np.expand_dims(img_array, axis=0)
@@ -68,4 +68,3 @@ predicted_index = np.argmax(predictions[0])
 
 print('Імовірності по класах:', predictions[0])
 print('Модель визначила:', class_names[predicted_index])
-
